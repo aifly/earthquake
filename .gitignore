@@ -1,4 +1,5 @@
 node_modules/
+weixin/
 main/node_modules/
 .idea/
 *.xml
