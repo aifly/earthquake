@@ -1,8 +1,6 @@
 import Vue from "vue";
 import './components/css/index.css';
 import Index from './components/index/index';
-import Share from './components/share/index';
-import Upload from './components/upload/index';
 import Main from './components/main/index';
 import Music from './components/music/index';
 import Obserable from './components/lib/obserable';
@@ -52,13 +50,12 @@ new Vue({
 		<audio src='./assets/music/photo.mp3' ref='photo'></audio>
 		<audio src='./assets/music/bg.mp3' ref='audio'></audio>
 		<audio src='./assets/music/tu.mp3' ref='tu' loop></audio>
+		<Music   :obserable='obserable'></Music>
 	*/
 	template: `<div>
-		<Music   :obserable='obserable'></Music>
-		<Index  v-if='show && !isShare'  :obserable='obserable'></Index>
+		<Index  v-if='show && !isShare && false'  :obserable='obserable'></Index>
 		<Main  v-if='show && !isShare'  :obserable='obserable'></Main>
-		<Upload  v-if='show && !isShare'  :obserable='obserable'></Upload>
-		<Share :pv='pv' v-if='show'    :obserable='obserable'></Share>
+		
 		<div  v-if='!loaded' :style='{background:"#158ae4"}' class='zmiti-loading lt-full'>
 			<div class='zmiti-loading-ui'>
 				 <a href="#">
@@ -121,8 +118,6 @@ new Vue({
 		Index,
 		Music,
 		Main,
-		Upload,
-		Share
 	},
 	mounted() {
 
