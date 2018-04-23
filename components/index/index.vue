@@ -8,7 +8,7 @@
 		<div class="zmiti-index">
 			<img :src="imgs.index">
 		</div>
-		<canvas ref='canvas' class="zmiti-canvas" :width="viewW" :height='viewH/2.8'></canvas>
+		<canvas ref='canvas' class="zmiti-canvas" :width="viewW" :height='290'></canvas>
 	</div>
 </template>
 
@@ -18,6 +18,7 @@
 	import zmitiUtil from '../lib/util';
 	import $ from 'jquery';
 	import Toast from '../toast/toast';
+	import Dot from './dot';
 	export default {
 		props:['obserable'],
 		name:'zmitiindex',
@@ -30,6 +31,7 @@
 				viewW:window.innerWidth,
 				viewH:window.innerHeight,
 				showMasks:false,
+				dots:[],
 
 			}
 		},
@@ -43,7 +45,46 @@
 				var canvas = this.$refs['canvas'];
 				var context = canvas.getContext('2d');
 
-				context.drawImage(e.target,65,20);
+
+				var offCanvas = document.createElement('canvas');
+				var width = canvas.width,
+					height= canvas.height;
+				offCanvas.width = width;
+				offCanvas.height = height;
+				var offContext = offCanvas.getContext('2d');
+
+				offContext.drawImage(e.target,65,0);
+
+
+				var imgData = offContext.getImageData(0,0,width,height);
+				context.putImageData(imgData,0,0);
+				var gap = 4;
+				for(var x =0;x<imgData.width;x+=gap){
+					for(var y =0 ; y < imgData.height;y+=gap){
+						var a = (x + y * imgData.width)*4;
+						if(imgData.data[a+3]>50){
+							/*var dot = new Dot({
+								context,
+								x,
+								y,
+								r:imgData.data[a],
+								g:imgData.data[a+1],
+								b:imgData.data[a+2],
+								a:imgData.data[a+3]
+							})
+							this.dots.push(dot)*/
+						}
+					}
+				}
+				
+
+				setTimeout(()=>{
+					//
+					
+
+				},2000)
+
+
 
 
 			},

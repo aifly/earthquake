@@ -29,9 +29,9 @@ $bgColor: #f1ebcb;
 
 	.zmiti-canvas{
 		box-sizing:border-box;
-		border:1px solid red;
+		//border:1px solid red;
 		@include pos(a);
-		top: 0;
+		top: 10vh;
 		left: 0;
 	}
 	

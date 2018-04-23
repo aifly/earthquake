@@ -46,9 +46,8 @@
     margin-top: 5vh; }
   .zmiti-index-main-ui .zmiti-canvas {
     box-sizing: border-box;
-    border: 1px solid red;
     position: absolute;
-    top: 0;
+    top: 10vh;
     left: 0; }
 
 @-webkit-keyframes rotate1 {
