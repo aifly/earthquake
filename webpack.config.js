@@ -1,5 +1,6 @@
 var webpack = require('webpack');
-
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+var port = 4033;
 var config = {
     entry: {
         'index': "./index.js",
@@ -13,7 +14,7 @@ var config = {
     },
     devServer: {
         inline: true,
-        port: 4033,
+        port: port,
         hot: true
     },
     externals: {
@@ -34,6 +35,11 @@ var config = {
         /* new webpack.optimize.CommonsChunkPlugin({
             name:"vendor",  
          }),*/
+        new OpenBrowserPlugin(
+            { 
+                url: 'http://localhost:'+port
+            }
+        )
     ],
     module: {
 

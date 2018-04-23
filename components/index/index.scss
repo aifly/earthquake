@@ -1,7 +1,7 @@
 ﻿@import "../css/base.scss";
 $baseColor: #fcffb4;
 $viewW: 750px;
-$bgColor: #4081dd;
+$bgColor: #f1ebcb;
 
 .zmiti-index-main-ui {
 	overflow: hidden;
@@ -18,86 +18,24 @@ $bgColor: #4081dd;
 		z-index: 10;
 	}
 
-	.zmiti-year{
-		width: 2rem;
-		margin: 6vh auto 0;
-		@include pos(r);
-		z-index: 10;
+	.zmiti-title{
+		margin-top: 10vh;
+		opacity: 0;
+
+	}
+	.zmiti-index{
+		margin-top: 5vh;
 	}
 
-	.zmiti-title1{
-		width: 7rem;
-		margin: 2vh auto 0;
-		@include pos(r);
-		z-index: 10;
-	}
-	.zmiti-cloud{
+	.zmiti-canvas{
+		box-sizing:border-box;
+		border:1px solid red;
 		@include pos(a);
-		top: 6vh;
-		width: 16rem;
-		left: -3rem;
-		&.active{
-
-			@include animation(rotate1 .8s  linear forwards);
-		}
+		top: 0;
+		left: 0;
 	}
 	
-	.zmiti-xiongan{
-		@include pos(a);
-		top: 10%;
-		width: 14rem;
-		left: -2rem;
-		&.active{
-			@include animation(rotate1 .8s  linear forwards);
-		}
-	}
-	.zmiti-cloud2{
-		z-index: 1000;
-	}
-	.zmiti-text{
-		@include pos(a);
-		width: 9rem;
-		left: .5rem;
-		bottom: 2rem;
-		z-index: 101;
-		color:#364b6a;
-		font-size: 20px;
-		text-indent: 2em;
-		line-height: .6rem;
-	}
-
-	.zmiti-logo{
-		width: 3rem;
-		@include pos(a);
-		bottom: .4rem;
-		color:#333;
-		right: .2rem;
-		text-align: center;
-		font-size: 18px;
-		img{
-			width: 1rem;
-			display: block;
-			margin: 0 auto .1rem;
-
-		}
-	}
-
-	.zmiti-entry{
-		width: 2rem;
-		text-align: center;
-		background: #fff;
-		line-height: .8rem;
-		@include br(10px);
-		@include pos(a);
-		left: 4rem;
-		bottom: 1rem;
-
-		z-index: 10;
-		color:#ca141f;
-		font-size: .45rem;
-
-		@include animation(scale 1s linear infinite alternate);
-	}
+	
 
 
 }

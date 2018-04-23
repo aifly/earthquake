@@ -33,76 +33,23 @@
   width: 10rem;
   left: 50% !important;
   margin-left: -375px;
-  background: #4081dd;
+  background: #f1ebcb;
   opacity: 0;
   z-index: -1; }
   .zmiti-index-main-ui.show {
     opacity: 1;
     z-index: 10; }
-  .zmiti-index-main-ui .zmiti-year {
-    width: 2rem;
-    margin: 6vh auto 0;
-    position: relative;
-    z-index: 10; }
-  .zmiti-index-main-ui .zmiti-title1 {
-    width: 7rem;
-    margin: 2vh auto 0;
-    position: relative;
-    z-index: 10; }
-  .zmiti-index-main-ui .zmiti-cloud {
+  .zmiti-index-main-ui .zmiti-title {
+    margin-top: 10vh;
+    opacity: 0; }
+  .zmiti-index-main-ui .zmiti-index {
+    margin-top: 5vh; }
+  .zmiti-index-main-ui .zmiti-canvas {
+    box-sizing: border-box;
+    border: 1px solid red;
     position: absolute;
-    top: 6vh;
-    width: 16rem;
-    left: -3rem; }
-    .zmiti-index-main-ui .zmiti-cloud.active {
-      -webkit-animation: rotate1 0.8s linear forwards;
-      animation: rotate1 0.8s linear forwards; }
-  .zmiti-index-main-ui .zmiti-xiongan {
-    position: absolute;
-    top: 10%;
-    width: 14rem;
-    left: -2rem; }
-    .zmiti-index-main-ui .zmiti-xiongan.active {
-      -webkit-animation: rotate1 0.8s linear forwards;
-      animation: rotate1 0.8s linear forwards; }
-  .zmiti-index-main-ui .zmiti-cloud2 {
-    z-index: 1000; }
-  .zmiti-index-main-ui .zmiti-text {
-    position: absolute;
-    width: 9rem;
-    left: .5rem;
-    bottom: 2rem;
-    z-index: 101;
-    color: #364b6a;
-    font-size: 20px;
-    text-indent: 2em;
-    line-height: .6rem; }
-  .zmiti-index-main-ui .zmiti-logo {
-    width: 3rem;
-    position: absolute;
-    bottom: .4rem;
-    color: #333;
-    right: .2rem;
-    text-align: center;
-    font-size: 18px; }
-    .zmiti-index-main-ui .zmiti-logo img {
-      width: 1rem;
-      display: block;
-      margin: 0 auto .1rem; }
-  .zmiti-index-main-ui .zmiti-entry {
-    width: 2rem;
-    text-align: center;
-    background: #fff;
-    line-height: .8rem;
-    border-radius: 10px;
-    position: absolute;
-    left: 4rem;
-    bottom: 1rem;
-    z-index: 10;
-    color: #ca141f;
-    font-size: .45rem;
-    -webkit-animation: scale 1s linear infinite alternate;
-    animation: scale 1s linear infinite alternate; }
+    top: 0;
+    left: 0; }
 
 @-webkit-keyframes rotate1 {
   to {

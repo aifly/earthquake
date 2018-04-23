@@ -53,7 +53,7 @@ new Vue({
 		<Music   :obserable='obserable'></Music>
 	*/
 	template: `<div>
-		<Index  v-if='show && !isShare && false'  :obserable='obserable'></Index>
+		<Index  v-if='show && !isShare'  :obserable='obserable'></Index>
 		<Main  v-if='show && !isShare'  :obserable='obserable'></Main>
 		
 		<div  v-if='!loaded' :style='{background:"#158ae4"}' class='zmiti-loading lt-full'>

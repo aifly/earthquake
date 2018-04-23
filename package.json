@@ -31,6 +31,7 @@
     "less": "^2.5.3",
     "less-loader": "^2.2.2",
     "less-plugin-clean-css": "^1.5.1",
+    "open-browser-webpack-plugin": "^0.0.5",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "velocity": "^0.7.2",

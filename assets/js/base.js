@@ -5,6 +5,10 @@
 	split: './assets/images/split.png',
 	stone: './assets/images/stone.png',
 	safe: './assets/images/safe.png',
+	title: './assets/images/title.png',
+	index: './assets/images/index.png',
+
+
 }
 
 
