@@ -1,5 +1,5 @@
 import {imgs} from '../lib/assets.js';
-import {Stone,Split,SafeArea} from './obstacle';
+import {Stone,Split,SafeArea,Person} from './obstacle';
 var mainGameState = {
 	preload(){
 		for (var img in imgs){
@@ -20,7 +20,7 @@ var mainGameState = {
 			viewH = window.innerHeight;
 		this.viewW = viewW;
 		this.viewH = viewH;
-		for(var i =0 ; i<5;i++){
+		for(var i =0 ; i<4;i++){
 			if(i<6){
 				var s1 = new Split({
 					game:this.game,
@@ -70,6 +70,9 @@ var mainGameState = {
 		})
 
 		this.game.physics.enable(safe.stone, Phaser.Physics.ARCADE);
+
+
+
 		
 	},
 	update(){

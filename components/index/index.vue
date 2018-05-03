@@ -25,7 +25,7 @@
 		data(){
 			return{
 				imgs,
-				show:true,
+				show:false,
 				toastMsg:'',
 				cloudIndex:0,
 				viewW:window.innerWidth,

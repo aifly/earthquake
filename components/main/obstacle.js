@@ -64,10 +64,15 @@ class SafeArea extends Stone{
 		super(option)
 		this.key = option.key || 'safe';
 	}
+}
 
-
+class Person extends Stone{
+	constructor(option){
+		super(option);
+		this.key = option.key  || 'person';
+	}
 }
 
 
 
-export default {Stone,Split,SafeArea}
+export default {Stone,Split,SafeArea,Person}
