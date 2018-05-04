@@ -1,15 +1,20 @@
 class Stone{
 	constructor(option={}){
 
+		window._this = this;
 		this.x = option.x || 0;
 		this.y = option.y || 0;
 		this.w = option.w || 94;
 		this.h = option.h || 50;
 		this.scale = option.scale || 1;
 
-		this.maxHeight = Math.random() * window.innerHeight;
+		this.maxHeight = Math.random() * (window.innerHeight - 100);
+
+		console.log(this.maxHeight)
 
 		this.iNow = 0;
+
+		this.die = false;
 
 		this.game = option.game;
 
@@ -34,13 +39,33 @@ class Stone{
 		var stone = this.game.add.sprite(this.x,this.y,this.key);
 		stone.width  = this.w*this.scale;
 		stone.height = this.h*this.scale;
+
+
+
 		if(this.key === 'split'){
 			stone.anchor.setTo(.5, .5);
 			stone.rotation = Math.random()*360*Math.PI/180;
 		}
 		//stone.alpha = 0;
-		
+
+		var graphics = this.game.add.graphics(0,0);
+
+		graphics.beginFill(0xcccccc, 1);
+		graphics.drawEllipse(this.x + 50,this.maxHeight+50,50,20);
+		graphics.endFill();
+
+		this.graphics = graphics;
+		if(this.die){
+			this.destroy();
+		}
 		this.stone = stone;
+	}
+
+	destroy(){
+		//this.graphics.destroy();
+		this.game.stage.removeChild(this.graphics);
+		this.graphics.alpha = 0;
+
 	}
 
 	update(){

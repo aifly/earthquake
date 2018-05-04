@@ -144,6 +144,7 @@ var mainGameState = {
 							item.init();
 							item.stone.y = -100;
 							item.die = true;
+							item.destroy();
 						})
 					},2000)
 					
